@@ -10,13 +10,13 @@ class DatabaseConnection:
         if os.getenv('DB_NAME') == 'test_db':
             self.db_name = 'test_db'
         else:
-            self.db_name = 'learn_db'
+            self.db_name = 'd76mr1ca3nficf'
 
         pprint(self.db_name)
 
         try:
             self.connection = psycopg2.connect(
-                dbname=self.d76mr1ca3nficf, user='nhjhetdsjoidkk', host='ec2-50-19-249-121.compute-1.amazonaws.com', password='7484d15b3b4f770c5d847f06c981d8d77e7abdbd092e795882600e1e11ef7479', port=5432
+                dbname=self.db_name, user='nhjhetdsjoidkk', host='ec2-50-19-249-121.compute-1.amazonaws.com', password='7484d15b3b4f770c5d847f06c981d8d77e7abdbd092e795882600e1e11ef7479', port=5432
             )
             self.connection.autocommit = True
             self.cur = self.connection.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
